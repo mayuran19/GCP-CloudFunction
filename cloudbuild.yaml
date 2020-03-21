@@ -2,7 +2,7 @@ steps:
 - name: gcr.io/cloud-builders/git
   args: ['clone', 'https://github.com/mayuran19/GCP-CloudFunction']
 - name: gcr.io/cloud-builders/git
-  args: ['pull', 'master']
+  args: ['pull']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'function-1', '--trigger-http', '--runtime', 'nodejs8', '--entry-point', 'helloWorld']
   dir: './'
